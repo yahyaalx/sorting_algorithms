@@ -23,7 +23,7 @@ int	getMax(int *array, size_t size)
 	return (max);
 }
 /**
- * radix_sort - logic behind the radix sorting
+ * radix_sort2 - logic behind the radix sorting
  * @array: array of ints to sort
  * @size: size of the array
  * @exp: digit pos during the sorting
@@ -52,8 +52,7 @@ void	radix_sort2(int *array, size_t size, int exp)
 		count[i] += count[i - 1];
 		i++;
 	}
-
-k = size - 1;
+	k = size - 1;
 
 	while (k >= 0)
 	{
@@ -76,14 +75,14 @@ k = size - 1;
  */
 void	radix_sort(int *array, size_t size)
 {
-int max;
-int exp;
+	int max;
+	int exp;
 
 	if (array == NULL || size < 2)
 		return;
 
-max = getMax(array, size);
-exp = 1;
+	max = getMax(array, size);
+	exp = 1;
 
 	while (max / exp > 0)
 	{
