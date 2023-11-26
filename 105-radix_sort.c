@@ -28,7 +28,7 @@ int	getMax(int *array, size_t size)
  * @size: size of the array
  * @exp: digit pos during the sorting
  */
-void	radix_sort(int *array, size_t size, int exp)
+void	radix_sort2(int *array, size_t size, int exp)
 {
 	const int	base = 10;
 	int	output[100];
@@ -87,7 +87,7 @@ exp = 1;
 
 	while (max / exp > 0)
 	{
-		radix_sort(array, size, exp);
+		radix_sort2(array, size, exp);
 		print_array(array, size);
 		exp *= 10;
 	}
